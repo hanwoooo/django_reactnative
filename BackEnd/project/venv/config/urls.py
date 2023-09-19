@@ -21,5 +21,5 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('subway/', include("subway.urls")),
-    re_path('.*', TemplateView.as_view(template_name='App.js')),
+    re_path('subway/', TemplateView.as_view(template_name='App.js')),
 ]
