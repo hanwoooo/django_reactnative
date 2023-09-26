@@ -1,16 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { StyleSheet, Text, View, Button, Alert, TouchableOpacity, } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, TouchableOpacity, } from 'react-native';
 
 function MainPage({navigation}) {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Text style={styles.text}>
                 Click Start!!
             </Text>
-            <View style={styles.button}>
+            <SafeAreaView style={styles.button}>
                 <TouchableOpacity
-                    //onPress={Alert.alert("Hello~~")}
                     onPress={() => navigation.navigate("Map")}
                 >
                     {/* 커스텀 버튼을 만들기 위해 사용*/}
@@ -18,9 +17,9 @@ function MainPage({navigation}) {
                         Start
                     </Text>
                 </TouchableOpacity>
-            </View>
+            </SafeAreaView>
             <StatusBar style="auto" />
-        </View>
+        </SafeAreaView>
     );
 }
 
@@ -31,7 +30,6 @@ const styles = StyleSheet.create({ //자동완성이 필요할 경우 무조건 
         backgroundColor: '#fff',
         alignItems: 'center',
         marginHorizontal: 16
-        //justifyContent: 'center',
     },
     text: {
         marginTop: 160,
